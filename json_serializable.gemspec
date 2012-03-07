@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = JsonSerializable::VERSION
   s.authors     = ["smsohan"]
   s.email       = ["sohan39@gmail.com"]
-  s.homepage    = "https://github.com/smsohan/json_serializer"
+  s.homepage    = "https://github.com/smsohan/json_serializable"
   s.summary     = %q{Provides a clean approach to custom JSON serialize your AR models}
   s.description = %q{Use custom names in JSON keys and your custom logic in JSON values}
 
