@@ -49,4 +49,4 @@ Use the Issues page or knock me at @smsohan if its quick!
 
 ##License
 
-Released under DWTFYW (Do What the F* You Want) License.
+Released under DTFYW (Do the F* You Want) License.
