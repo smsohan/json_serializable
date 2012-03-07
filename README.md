@@ -47,4 +47,6 @@ In my projects I have found the basic as_json method that you get from Rails to 
 
 Use the Issues page or knock me at @smsohan if its quick!
 
+##License
+
 Released under DWTFYW (Do What the F* You Want) License.
