@@ -2,7 +2,8 @@
 In my projects I have found the basic as_json method that you get from Rails to be quite limiting. For example, as_json takes :methods, but the hash key can only be the method's name. Similar restriction applies to the :only option. So, I am extending this method in JsonSerializable so that you can customize your JSON output with a simple declarative syntax.
 
 ## Build Status
-![Current Build Status](http://travis-ci.org/smsohan/json_serializer.png)
+[![Build Status](https://secure.travis-ci.org/smsohan/json_serializer.png)](http://travis-ci.org/smsohan/json_serializer)
+
 
 ##In you Gemfile:
 
