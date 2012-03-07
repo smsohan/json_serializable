@@ -21,24 +21,33 @@ module JsonSerializable
   module InstanceMethods
 
     def as_json(options = {})
-      options ||= {}
-      custom_options = self.class.json_field_names.size > 0 ? options.merge(only: self.class.json_field_names) : options
-      custom_hash = super(custom_options)
+      super(custom_options(self.class.json_field_names, options)).merge hash_from_mappings(self.class.json_mappings)
+    end
 
-      self.class.json_mappings.each_pair do |key, value|
+    private
+    def custom_options(fields, options)
+      options ||= {}
+      if fields.size > 0
+        options[:only] ||= []
+        options[:only] |= fields
+      end
+      options
+    end
+
+    def hash_from_mappings(mappings)
+      custom_hash = {}
+      mappings.each_pair do |key, value|
         if value.is_a?(Symbol)
            custom_hash[value] = self.send(key)
         else
            custom_hash[key] = value[self]
         end
       end
-
       custom_hash
     end
   end
 
   module ClassMethods
-
 
     def json_serializable field_names, mappings = {}
       @@json_field_names = field_names
